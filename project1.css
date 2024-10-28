@@ -1,0 +1,396 @@
+/* General body styles */
+body {
+    background-image: url("./background_grid1.png");
+   
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Satoshi', sans-serif;
+}
+.header {
+    background-image: linear-gradient(to bottom, rgba(240, 248, 255, 0.8), rgba(255, 255, 255, 0));
+}
+/* Navbar styles */
+.nav_bar {
+    background-color: #ff020214;
+    width: 80%;
+    height: 65.33px;
+    border-radius: 10rem;
+    
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto 0;
+    color: #222222;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.nav_bar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+.nav_bar li{
+    height: 50px;
+}
+.nav_bar a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+ 
+}
+
+
+.nav_bar a:hover{
+    color: #ff5930;
+    
+}
+
+/* Responsive navbar for mobile screens */
+
+
+/* Slide-down text animation */
+.slide-down-text {
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+    animation: slideDown 2s ease forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Typing effect */
+.typing-text {
+    font-size: 34px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 700;
+    max-width: 100%;
+    padding: 0 20px; /* adds some space on the sides */
+    word-wrap: break-word;
+
+    border-right: 3px solid black;
+    width: 0;
+    animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 38ch;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+/* Text color */
+.orange {
+    color: #ff5930;
+    font-weight: 700;
+}
+
+/* Message box */
+.msg {
+    border: 2px dashed #ff5930;
+    width: 700px;
+    background-color: #fff7f0;
+    border-radius: 2rem;
+    margin-top: 50px;
+    padding: 20px;
+    margin-left: 50px;
+    font-family: 'Satoshi', sans-serif;
+
+    
+    font-weight: 600;
+}
+
+/* Responsive adjustments for message box */
+@media (max-width: 768px) {
+    .msg {
+        width: 90%; /* Reduce width on mobile */
+        margin-left: 0; /* Center message */
+    }
+}
+
+/* GIF styles */
+.gif {
+    width: 450px;
+    height: 350px;
+    margin-top: 70px;
+    margin-left: 50px;
+    border: 2px dashed #ff5930;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px #ff5930;
+}
+
+/* Responsive adjustments for GIF */
+@media (max-width: 768px) {
+    .gif {
+        width: 100%;
+        height: auto; /* Adjust height to fit content */
+        margin-left: 0;
+    }
+}
+
+/* Hover effects */
+.gif:hover, .msg:hover {
+    box-shadow: 4px 4px 8px #ff5930;
+}
+
+/* Flex container for message and gif */
+.box {
+    display: flex;
+    gap: 200px;
+    margin-top: 50px;
+}
+
+/* Responsive adjustments for box */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+/* Header text */
+.head {
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+    .head {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+    }
+
+    .slide-down-text {
+        font-size: 40px;
+    }
+
+    .typing-text {
+        font-size: 24px;
+    }
+    
+}
+
+/* Element margin */
+.elements {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.title{
+    margin-right: auto;
+    font-weight: 800;
+    border: 2px solid #ff5930;
+    border-radius: 20px;
+}
+.side_bar{
+   position: fixed;
+   top: 0;
+   right: 0;
+   height: 100vh;
+   width: 250px;
+   z-index: 999;
+   right: -250px; 
+   backdrop-filter: blur(10px);
+   background-color: rgba(240, 248, 255, 0.539);
+   box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+   display: none;
+   transition: transform 1s ease;
+   gap: 40px;
+ 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.side_bar.active {
+    transform: translateX(250px); /* Slide in by moving it to the left */
+}
+.side_bar li{
+    
+    width: 100%;
+    list-style: none;
+   
+
+}
+.title2{
+    text-align: center;
+    
+        margin-right: auto;
+        font-weight: 800;
+        border: 2px solid #ff5930;
+        border-radius: 20px;
+    
+}
+.header2{
+    display: none;
+}
+.side_bar a:hover{
+    color: #ff5930;
+   
+}
+.side_bar li a{
+    text-decoration: none;
+    color: #222222;
+    height: 50px;
+    padding: 12px 0;
+   font-weight: 600;
+    font-size: 24px;
+}
+.icon a:hover{
+    fill: #ff5930;
+}
+.icon1{
+    display: none;
+}
+@media(max-width:800px){
+    .hideonmobile{
+        display: none !important;
+    }
+    .header1{
+        display: none;
+    }
+    .header2{
+        display: block;
+    }
+    .icon1{
+        display: block !important;
+    }
+}
+@media(max-width:400px){
+    .side_bar{
+        width: 100%;
+    }
+}
+.side_bar li a:hover{
+    color: #ff5930;
+}
+.last{
+    background-color: #fff7f0;
+    width: 100vw;
+    margin-top: 20px;
+    text-align: center;
+}
+.contact {
+    width: 100%;
+    text-align: center;
+    padding: 50px 0; /* padding changed to be more effective */
+    position: relative; /* Ensure the .bg background is positioned relative to this container */
+    /* Stack order of the contact form content */
+    background-color: rgba(255, 255, 255, 0.8);
+    background: url("./lines-background.svg") ; 
+    background-repeat: repeat;
+    background-size: contain;
+    
+    background-position: center;/*  /* Optional: Add slight transparency for better readability */
+}
+
+/* Background container inside the contact section */
+.bg {
+  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /* Make sure the background is behind the form content */
+}
+form input,form textarea{
+    width: 75%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    border: #ff5930 solid 1px;
+    background-color: #f4afa049;
+    border-radius: 6px;
+    transition: 0.4s ease;
+    
+}
+.submit{
+margin-top: 10px;
+    padding: 10px 20px; /* Adjusts the space inside the button */
+  font-size: 16px; /* Ensures readable text */
+  border-radius: 5px; /* Smooth edges for better design */
+  width: auto; /* Allows the button to resize based on content */
+  max-width: 100%; /* Ensures it never overflows */
+  height: auto; /* Ensures flexibility in height */
+  background-color: #007BFF; /* Example button color */
+  color: white; /* Text color */
+  border: none; /* Removes default borders */
+  cursor: pointer; /* Changes cursor to pointer */
+  display: inline-block;
+  text-align: center;
+  background-color: #ff5930;
+}
+.talk{
+    color: #ff5930;
+    font-size: 45px;
+    border: solid rgba(255, 89, 48);
+    width: 30%; /* Allows the button to resize based on content */
+  max-width: 100%; /* Ensures it never overflows */
+  height: auto; 
+  border-radius: 6px;
+  margin: auto;
+  background-color: #f4afa049;
+  margin-top: 15px;
+  transition: 0.4s ease;
+
+}
+.talk:hover{
+    transform: scale(1.02);
+    background-color: #edb3a4;
+    color: #222222;
+    box-shadow: 5px 5px 8px rgba(255, 89, 48,0.8);
+}
+form input:hover{
+    transform: scale(1.02);
+}
+form textarea:hover{
+    transform: scale(1.02);
+}
+@media (max-width:668px) {
+    .talk{
+        ;
+        font-size: 20px;
+    }
+}
+#sent{
+    display: none;
+}
