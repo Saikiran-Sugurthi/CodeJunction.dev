@@ -1,0 +1,15 @@
+{
+  "name": "codejunction",
+  "version": "1.0.0",
+  "main": "project1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "CodeJunction"
+  },
+  "author": "sai kiran",
+  "license": "ISC",
+  "description": ""
+}
